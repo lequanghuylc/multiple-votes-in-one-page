@@ -1,0 +1,42 @@
+#edit-slug-box, 
+.updated.notice.notice-success.is-dismissible p a {
+    display:none;
+}
+#copy-shortcode{
+    margin-left:10px;
+    border-radius:4px;
+    padding:5px;
+    background-color: #0085BA;
+    color:#fff;
+}
+#copy-shortcode:hover{
+    cursor:pointer;
+}
+.mul_votes_text,
+.mul_votes_val{
+  height:40px;
+  min-width:40px;
+  border:none;
+  padding:5px;
+  border-radius:4px;
+  color:#fff;
+  font-size:1.5em;
+}
+.mul_votes_text:hover{
+  cursor:pointer;
+}
+.mul_votes_val{
+  background-color:#0085BA;
+}
+.mul_votes_text{
+  background-color:#E80C7A;
+}
+.mul_votes_text[disabled]:hover{
+  height:40px;
+  min-width:40px;
+  border:none;
+  padding:5px;
+  border-radius:4px;
+  color:#fff;
+  font-size:1.5em; 
+}
