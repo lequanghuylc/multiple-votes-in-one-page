@@ -13,12 +13,12 @@ __Multiple Votes in one page__ allows you to create multiple votes for unlimit i
 
 
 ## Installation
-Upload the Akismet plugin to your blog or Instal via wordpress.org library. Activate it, then you\'re good to go.
+Upload the Akismet plugin to your blog or Instal via wordpress.org library. Activate it, then you're good to go.
 
-After installation, there is a page in dashboard with title \"Votes\", you can create new Vote, creat Vote Category and use shortcode to display in pages/ posts/...
+After installation, there is a page in dashboard with title __"Votes"__, you can create new Vote, creat Vote Category and use shortcode to display in pages/ posts/...
 
 Shortcode:
-[mul_votes id=\"vote_id\"]
+__[mul_votes id="vote_id"]__
 
 Shortcodes are automatically generated when creating a new vote.
 
