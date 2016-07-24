@@ -19,7 +19,7 @@ function mul_votes_button($mul_votes_val) {
      <button id="mul_count_'. $mul_votes_val['id'] .'" class="mul_votes_val">' . $countnumber . '</button>
      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"onload="if(submitted)";}">
 	 </iframe>
-	 <form id="mul_votes_form_'. $mul_votes_val['id'] .'" action="'. plugins_url() .'/multiple-votes/form.php" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+	 <form id="mul_votes_form_'. $mul_votes_val['id'] .'" action="'. plugins_url() .'/multiple-votes-in-one-page/form.php" method="post" target="hidden_iframe" onsubmit="submitted=true;">
 	 <input type="hidden" value="'. $mul_votes_val['id'] .'" name="postid">
 	 <input type="hidden" value="" name="countvalue" id="mul_votes_count_'. $mul_votes_val['id'] .'">
 	 </form>
@@ -179,8 +179,8 @@ function remove_vote_permarklink() {
     global $post_type;
 
     if ($post_type == 'votes') {
-    	echo '<link rel="stylesheet" type="text/css" href="'. plugins_url(). '/multiple-votes/assets/style.css' . '">';
-        echo '<script src="'. plugins_url() .'/multiple-votes/assets/clipboard.min.js"></script>';
+    	echo '<link rel="stylesheet" type="text/css" href="'. plugins_url(). '/multiple-votes-in-one-page/assets/style.css' . '">';
+        echo '<script src="'. plugins_url() .'/multiple-votes-in-one-page/assets/clipboard.min.js"></script>';
     }
 }
 
@@ -289,6 +289,6 @@ function tsm_convert_id_to_term_in_query($query) {
 //add link tag in header
 add_action( 'wp_head', 'mul_votes_style' );
 function mul_votes_style() {
-  echo '<link rel="stylesheet" type="text/css" href="'. plugins_url(). '/multiple-votes/assets/style.css' . '">';
+  echo '<link rel="stylesheet" type="text/css" href="'. plugins_url(). '/multiple-votes-in-one-page/assets/style.css' . '">';
 }
 ?>
