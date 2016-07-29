@@ -18,11 +18,11 @@ Upload the Akismet plugin to your blog or Instal via wordpress.org library. Acti
 After installation, there is a page in dashboard with title \"Votes\", you can create new Vote, creat Vote Category and use shortcode to display in pages/ posts/...
 
 Shortcode:
-[mul_votes id=\"vote_id\"]
+[lqh_mul_votes id=\"vote_id\"]
 
 Shortcodes are automatically generated when creating a new vote.
 
 == Screenshots ==
-1. https://s5.postimg.org/gq7a6oefr/image.png
-2. https://s5.postimg.org/6u67718nr/image.png
+1. https://s5.postimg.org/va1uo67fb/image.png
+2. https://s5.postimg.org/a1o66qsyf/image.png
 3. https://s5.postimg.org/af22q9d7b/image.png

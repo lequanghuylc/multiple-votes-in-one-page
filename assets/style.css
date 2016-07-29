@@ -1,4 +1,5 @@
 #edit-slug-box, 
+#wp-admin-bar-view,
 .updated.notice.notice-success.is-dismissible p a {
     display:none;
 }
