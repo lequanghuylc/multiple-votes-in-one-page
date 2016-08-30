@@ -22,6 +22,8 @@ __[lqh_mul_votes id="vote_id"]__
 
 Shortcodes are automatically generated when creating a new vote.
 
+### [Wordpress.org plugin link: https://wordpress.org/plugins/multiple-votes-in-one-page/](https://wordpress.org/plugins/multiple-votes-in-one-page/)
+
 ## Screenshots
 ![Add Vote](https://s5.postimg.org/va1uo67fb/image.png)
 ![Manga Vote](https://s5.postimg.org/a1o66qsyf/image.png)
