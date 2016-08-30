@@ -3,7 +3,7 @@
  * Plugin Name: Multiple Votes in one page
  * Plugin URI: https://github.com/lequanghuylc/multiple-votes-in-one-page
  * Description: This plugin allow you to create multiple votes in one page
- * Version: 1.0 
+ * Version: 1.0.1 
  * Author: Huy Le 
  * Author URI: http://lequanghuy.xyz
  * License: GPLv2 or later
@@ -24,6 +24,12 @@ function lqh_mul_votes_shortcode($val) {
 	 </form>
      <script>
     	jQuery(function($){
+    		if(!localStorage.getItem("_multiple_votes_'. $val['id'].'")){
+			  localStorage.setItem("_multiple_votes_'. $val['id'].'", "false");
+			}
+			if(localStorage.getItem("_multiple_votes_'. $val['id'].'") == "true"){
+				$("#lqh_mul_votes_'. $val['id'].'").attr("disabled", "true");
+			}
     		$("#lqh_mul_votes_'. $val['id'].'").click(function(){
 	            var countNumber = Number($("#lqh_mul_votes_count_'. $val['id'] .'").html()) + 1;
 	            $("#lqh_mul_votes_count_'. $val['id'] .'").html(countNumber);
@@ -39,6 +45,7 @@ function lqh_mul_votes_shortcode($val) {
 						success:function(data){
 							$("#lqh_mul_votes_'. $val['id'].'").html("Voted");
 							$("#lqh_mul_votes_'. $val['id'].'").attr("disabled", "true");
+							localStorage.setItem("_multiple_votes_'. $val['id'].'", "true");
 						}
 					});
 				return false;	
