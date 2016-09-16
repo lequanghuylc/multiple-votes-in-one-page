@@ -3,7 +3,7 @@
  * Plugin Name: Multiple Votes in one page
  * Plugin URI: https://github.com/lequanghuylc/multiple-votes-in-one-page
  * Description: This plugin allow you to create multiple votes in one page
- * Version: 1.0.2 
+ * Version: 1.0.3 
  * Author: Huy Le 
  * Author URI: http://lequanghuy.xyz
  * License: GPLv2 or later
