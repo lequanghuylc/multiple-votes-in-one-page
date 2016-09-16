@@ -180,21 +180,23 @@ function lqh_mul_votes_create_vote_post_type() {
 	
 		// OK, we're authenticated: we need to find and save the data
 		// We'll put it into an array to make it easier to loop though.
-		
-		$multiplevotesioplqh_meta['_vote'] = $_POST['_vote'];
-		
-		// Add values of $events_meta as custom fields
-		
-		foreach ($multiplevotesioplqh_meta as $key => $value) { // Cycle through the $multiplevotesioplqh_meta array!
-			if( $post->post_type == 'revision' ) return; // Don't store custom data twice
-			$value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
-			if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
-				update_post_meta($post->ID, $key, $value);
-			} else { // If the custom field doesn't have a value
-				add_post_meta($post->ID, $key, $value);
-			}
+		if( isset( $_POST['_vote'] ) ){
+			$multiplevotesioplqh_meta['_vote'] = $_POST['_vote'];
 			
+			// Add values of $events_meta as custom fields
+			
+			foreach ($multiplevotesioplqh_meta as $key => $value) { // Cycle through the $multiplevotesioplqh_meta array!
+				if( $post->post_type == 'revision' ) return; // Don't store custom data twice
+				$value = implode(',', (array)$value); // If $value is an array, make it a CSV (unlikely)
+				if(get_post_meta($post->ID, $key, FALSE)) { // If the custom field already has a value
+					update_post_meta($post->ID, $key, $value);
+				} else { // If the custom field doesn't have a value
+					add_post_meta($post->ID, $key, $value);
+				}
+				
+			}	
 		}
+		
 	
 	}
 
