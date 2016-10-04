@@ -22,6 +22,9 @@ Most of vote plugins available in library share the common limitation: They can'
 "Multiple Votes in one page" allows you to create multiple votes for unlimit items, products, categories,... appeared in one web page. It can be used for collecting information purpose, survey, wishlist, feedback...
 
 
+Change logs
+
+__1.0.4__: Fix security bug
 
 == Installation ==
 
@@ -45,6 +48,3 @@ Shortcodes are automatically generated when creating a new vote.
 
 3. Display Votes
 
-== Change logs ==
-
-__1.0.4__: Fix security bug
