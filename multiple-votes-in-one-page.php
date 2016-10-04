@@ -3,7 +3,7 @@
  * Plugin Name: Multiple Votes in one page
  * Plugin URI: https://github.com/lequanghuylc/multiple-votes-in-one-page
  * Description: This plugin allow you to create multiple votes in one page
- * Version: 1.0.3 
+ * Version: 1.0.4 
  * Author: Huy Le 
  * Author URI: http://lequanghuy.xyz
  * License: GPLv2 or later
@@ -63,7 +63,8 @@ add_shortcode( 'lqh_mul_votes', 'lqh_mul_votes_shortcode' );
 function lqh_ajax_form_handle_from_shortcode(){
 	$lqh_post_id= absint(intval(sanitize_text_field($_POST['lqh_mul_votes_postid'])));
 	$lqh_post_count_value = absint(intval(sanitize_text_field($_POST['lqh_mul_votes_countvalue'])));
-	update_post_meta($lqh_post_id,'_vote', $lqh_post_count_value);
+	$lqh_current_count_value = get_post_meta( $lqh_post_id, '_vote', true );
+	update_post_meta($lqh_post_id,'_vote', $lqh_current_count_value + 1);
 	die();
 }
 add_action('wp_ajax_lqh_ajax_form_handle_from_shortcode', 'lqh_ajax_form_handle_from_shortcode');

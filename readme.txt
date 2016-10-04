@@ -44,3 +44,7 @@ Shortcodes are automatically generated when creating a new vote.
 2. Manage Votes
 
 3. Display Votes
+
+== Change logs ==
+
+__1.0.4__: Fix security bug
